@@ -3,6 +3,7 @@ package com.capstone.medicare.Medicareproject;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -24,7 +25,12 @@ public class login {
 		//driver.findElement(By.linkText("signup")).click();
 		driver.findElement(By.id("firstName")).sendKeys("Bindu");
 		driver.findElement(By.id("lastName")).sendKeys("P");
-		driver.findElement(By.name("email")).sendKeys("123@gmail.com");
+		String Email="bindu"+Math.random()+"@gmail.com";
+		String username=Email;
+		System.out.println(Email);
+		System.out.println(username);
+		WebElement ele=driver.findElement(By.name("email"));
+		ele.sendKeys(username);
 		driver.findElement(By.id("contactNumber")).sendKeys("9347820123");
 		driver.findElement(By.name("password")).sendKeys("12345");
 		driver.findElement(By.name("confirmPassword")).sendKeys("12345");
@@ -45,10 +51,9 @@ public class login {
 		System.out.println("We sucessfully validated the signup using USER ");
 		Thread.sleep(60);
 		driver.findElement(By.xpath("//a[@class='btn btn-lg btn-primary']")).click();
-		
-		Thread.sleep(60);
+		Thread.sleep(100);
 		driver.findElement(By.xpath("//a[contains(text(),'Login Here')]")).click();
-		driver.findElement(By.name("username")).sendKeys("123@gmail.com");
+		driver.findElement(By.name("username")).sendKeys(username);
 		driver.findElement(By.name("password")).sendKeys("12345");
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		System.out.println("sucessfully Login into the USER profile");
@@ -68,8 +73,13 @@ public class login {
 		Thread.sleep(60);
 		driver.findElement(By.xpath("(//a[@class=\"btn btn-success\"])[1]")).click();
 		System.out.println("Multiple Items successfully added to User cart");
-		driver.findElement(By.xpath("//a[contains(text(),'Checkout')]")).click();
+		driver.findElement(By.xpath("//a[@class=\"btn btn-success btn-block\"]")).click();
 		System.out.println("Validated Checkout of Multiple items of User Profile");
+		//Thread.sleep(60);
+		//driver.findElement(By.xpath("//a[@class=\"btn btn-primary\"]")).click();
+		//Thread.sleep(60);
+		//WebElement Finalpayment=driver.findElement(By.xpath("//span[@class=\"badge pull-right\"]"));
+		//Finalpayment.getText();
 		driver.close();
 	}
 }
