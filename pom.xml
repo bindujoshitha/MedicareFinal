@@ -63,6 +63,10 @@
           <suiteXmlFiles>
           <suiteXmlFile>${xmlSuiteFileName}</suiteXmlFile>
           </suiteXmlFiles>
+       	  <SystemPropertyVariables>
+				 <appURL>${url}</appURL>
+			 </SystemPropertyVariables>   
+       
           </configuration>
   		</plugin>
   	</plugins>
