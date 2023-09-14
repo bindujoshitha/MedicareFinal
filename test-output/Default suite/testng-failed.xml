@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.capstone.medicare.Medicareproject.login">
+      <class name="com.capstone.medicare.Medicareproject.LOGINSUPPLIERPROJECT">
         <methods>
-          <include name="loginUser"/>
+          <include name="LOGINUSERPROFILE"/>
+          <include name="before"/>
+          <include name="aftertest"/>
         </methods>
-      </class> <!-- com.capstone.medicare.Medicareproject.login -->
+      </class> <!-- com.capstone.medicare.Medicareproject.LOGINSUPPLIERPROJECT -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

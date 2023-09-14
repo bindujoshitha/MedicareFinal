@@ -1,7 +1,6 @@
 package com.capstone.medicare.Medicareproject;
 
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class login {
 	@Test
@@ -57,7 +57,7 @@ public class login {
 		driver.findElement(By.name("password")).sendKeys("12345");
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		System.out.println("sucessfully Login into the USER profile");
-		Thread.sleep(60);
+		Thread.sleep(100);
 		driver.findElement(By.id("a_Antipyretics")).click();
 		Thread.sleep(60);
 		driver.findElement(By.xpath("(//a[@class=\"btn btn-success\"])[1]")).click();
@@ -75,11 +75,6 @@ public class login {
 		System.out.println("Multiple Items successfully added to User cart");
 		driver.findElement(By.xpath("//a[@class=\"btn btn-success btn-block\"]")).click();
 		System.out.println("Validated Checkout of Multiple items of User Profile");
-		//Thread.sleep(60);
-		//driver.findElement(By.xpath("//a[@class=\"btn btn-primary\"]")).click();
-		//Thread.sleep(60);
-		//WebElement Finalpayment=driver.findElement(By.xpath("//span[@class=\"badge pull-right\"]"));
-		//Finalpayment.getText();
 		driver.close();
 	}
 }

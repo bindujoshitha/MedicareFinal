@@ -24,7 +24,6 @@ public class loginsupplier {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath("//li[@id='signup']")).click();
-		//driver.findElement(By.linkText("signup")).click();
 		driver.findElement(By.id("firstName")).sendKeys("Bindu");
 		driver.findElement(By.id("lastName")).sendKeys("P");
 		String Email="bindu"+Math.random()+"@gmail.com";
@@ -55,7 +54,6 @@ public class loginsupplier {
 		Thread.sleep(100);
 		driver.findElement(By.xpath("//a[@class=\"btn btn-lg btn-success\"]")).click();
 		driver.manage().timeouts().getImplicitWaitTimeout();
-		
 		WebElement username1=driver.findElement(By.xpath("//input[@id='username']"));
 		username1.clear();
 		username1.sendKeys(username);
@@ -64,7 +62,7 @@ public class loginsupplier {
 		System.out.println("sucessfully Login into the SUPPLIER profile");
 		Thread.sleep(100);
 		driver.findElement(By.id("a_Antipyretics")).click();
-		Thread.sleep(60);
+		Thread.sleep(100);
 		driver.findElement(By.xpath("(//a[@class=\"btn btn-success\"])[1]")).click();
 		System.out.println("Could not add the items to cart in Supplier Profile having message:       ");
 		Thread.sleep(60);
