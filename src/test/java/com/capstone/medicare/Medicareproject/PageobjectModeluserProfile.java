@@ -1,12 +1,5 @@
 package com.capstone.medicare.Medicareproject;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-
-import io.github.bonigarcia.wdm.webdriver.WebDriverBrowser;
-
 public class PageobjectModeluserProfile  {
 	public String signupbutton() {
 		String Signup="signup";
@@ -108,10 +101,6 @@ public class PageobjectModeluserProfile  {
 		String Checkout="//a[contains(text(),'Checkout')]";
 		return Checkout;
 	}
-	public String  ViewProducts(){
-		String products="//a[contains(text(),'View Products')]";
-		return products;
-	}
 	public String Click_Antibiotics() {
 		String Antibiotics="a_Antibiotics";
 		return Antibiotics;
@@ -120,10 +109,48 @@ public class PageobjectModeluserProfile  {
 		String cartAntibiotics="(//span[@class=\"glyphicon glyphicon-shopping-cart\"])[3]";
 		return cartAntibiotics;
 	}
+	public String Cart_anti1() {
+		String Cart="(//span[@class=\"glyphicon glyphicon-shopping-cart\"])[6]";
+		return Cart;
+	}
 	public String Checkout_Antibiotics() {
 		String checkoutAntibiotics="//a[@class='btn btn-success btn-block']";
 		return checkoutAntibiotics;
 	}
-	
+	public String selectAddress() {
+		String Address="//a[@class=\"btn btn-primary\"]";
+		return Address;
+	}
+	public String Cardnumber() {
+		String Cardno="//input[@id=\"cardNumber\"]";
+		return Cardno;
+	}
+	public String ExpiryMonth() {
+		String EMonth="//input[@id=\"expityMonth\"]";
+		return EMonth;
+	}
+	public String ExpiryYear() {
+		String EYear="//input[@id=\"expityYear\"]";
+		return EYear;
+	}
+	public String CVVNO() {
+		String CVV="//input[@id=\"cvCode\"]";
+		return CVV;
+	}
+	public String Payment() {
+		String Pay="//a[@role=\"button\"]";
+		return Pay;
+	}
+	public String ContinueShopping() {
+		String Continue="//a[@class=\"btn btn-lg btn-warning\"]";
+		return Continue;
+	}
+	public String validatepayment() {
+		String validate="//h3[@class=\"text-center\"]";
+		return validate;
+	}
+	public String backshopping() {
+	String backshopping="//a[@class=\"btn btn-warning\"]";
+	return backshopping;
 }
-	
+}

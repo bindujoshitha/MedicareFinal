@@ -17,8 +17,6 @@ public class LOGINSUPPLIERPROJECT extends extentreportforsupplier{
 	@BeforeTest()
 	public void before() {
 			System.out.println("SUPPLIER Profile login Started");
-			
-			
 		}
 	@Test()
 	public void LOGINUSERPROFILE() throws Throwable {

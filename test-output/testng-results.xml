@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-14T16:27:20 IST" name="Default suite" finished-at="2023-09-14T16:27:33 IST" duration-ms="13230">
+  <suite started-at="2023-09-15T15:34:10 IST" name="Default suite" finished-at="2023-09-15T15:34:45 IST" duration-ms="34780">
     <groups>
     </groups>
-    <test started-at="2023-09-14T16:27:20 IST" name="Default test" finished-at="2023-09-14T16:27:33 IST" duration-ms="13230">
-      <class name="com.capstone.medicare.Medicareproject.LOGINSUPPLIERPROJECT">
-        <test-method is-config="true" signature="before()[pri:0, instance:com.capstone.medicare.Medicareproject.LOGINSUPPLIERPROJECT@7e057f43]" started-at="2023-09-14T16:27:20 IST" name="before" finished-at="2023-09-14T16:27:20 IST" duration-ms="11" status="PASS">
+    <test started-at="2023-09-15T15:34:10 IST" name="Default test" finished-at="2023-09-15T15:34:45 IST" duration-ms="34780">
+      <class name="com.capstone.medicare.Medicareproject.LOGINUSER">
+        <test-method is-config="true" signature="before()[pri:0, instance:com.capstone.medicare.Medicareproject.LOGINUSER@7e057f43]" started-at="2023-09-15T15:34:10 IST" name="before" finished-at="2023-09-15T15:34:10 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method signature="LOGINUSERPROFILE()[pri:0, instance:com.capstone.medicare.Medicareproject.LOGINSUPPLIERPROJECT@7e057f43]" started-at="2023-09-14T16:27:20 IST" name="LOGINUSERPROFILE" finished-at="2023-09-14T16:27:33 IST" duration-ms="12911" status="PASS">
+        <test-method signature="LOGINUSERPROFILE()[pri:0, instance:com.capstone.medicare.Medicareproject.LOGINUSER@7e057f43]" started-at="2023-09-15T15:34:10 IST" name="LOGINUSERPROFILE" finished-at="2023-09-15T15:34:44 IST" duration-ms="34060" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LOGINUSERPROFILE -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:com.capstone.medicare.Medicareproject.LOGINSUPPLIERPROJECT@7e057f43]" started-at="2023-09-14T16:27:33 IST" name="aftertest" finished-at="2023-09-14T16:27:33 IST" duration-ms="271" status="PASS">
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:com.capstone.medicare.Medicareproject.LOGINUSER@7e057f43]" started-at="2023-09-15T15:34:44 IST" name="aftertest" finished-at="2023-09-15T15:34:45 IST" duration-ms="657" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftertest -->
-      </class> <!-- com.capstone.medicare.Medicareproject.LOGINSUPPLIERPROJECT -->
+      </class> <!-- com.capstone.medicare.Medicareproject.LOGINUSER -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

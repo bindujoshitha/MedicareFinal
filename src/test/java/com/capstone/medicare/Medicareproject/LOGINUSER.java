@@ -54,7 +54,7 @@ public void LOGINUSERPROFILE() throws Throwable {
 	driver.findElement(By.id(pom.Country())).sendKeys("INDIA");
 	driver.findElement(By.name(pom.Confirm())).click();
 	String real="Role : USER";
-	Thread.sleep(60);
+	Thread.sleep(100);
 	String Actual=driver.findElement(By.xpath(pom.actualuser())).getText();
 	System.out.println(Actual);
 	Assert.assertEquals(Actual, real);
@@ -69,25 +69,45 @@ public void LOGINUSERPROFILE() throws Throwable {
 	System.out.println("sucessfully Login into the USER profile");
 	Thread.sleep(100);
 	driver.findElement(By.xpath(pom.Click_Antipyretics())).click();
-	Thread.sleep(60);
+	Thread.sleep(100);
 	driver.findElement(By.xpath(pom.cart_Antipyretics())).click();
 	System.out.println("Single Item successfully added to User cart");
 	Thread.sleep(100);
 	driver.findElement(By.xpath(pom.checkout_Antipyretics())).click();
 	System.out.println("Validated Checkout of Single item of User Profile");
+	Thread.sleep(100);
+	driver.findElement(By.xpath(pom.selectAddress())).click();
+	driver.findElement(By.xpath(pom.Cardnumber())).sendKeys("123456789");
+	driver.findElement(By.xpath(pom.ExpiryMonth())).sendKeys("09");
+	driver.findElement(By.xpath(pom.ExpiryYear())).sendKeys("27");
+	driver.findElement(By.xpath(pom.CVVNO())).sendKeys("234");
+	driver.findElement(By.xpath(pom.Payment())).click();
 	Thread.sleep(60);
-	driver.navigate().back();
-	Thread.sleep(60);
-	driver.findElement(By.xpath(pom.ViewProducts())).click();
+	String validate1=driver.findElement(By.xpath(pom.validatepayment())).getText();
+	System.out.println("Single item order success has message:  "+validate1);
+	driver.findElement(By.xpath(pom.ContinueShopping())).click();
+	
 	Thread.sleep(100);
 	driver.findElement(By.id(pom.Click_Antibiotics())).click();
 	Thread.sleep(100);
 	driver.findElement(By.xpath(pom.Cart_Antibiotics())).click();
+	Thread.sleep(100);
+	driver.findElement(By.xpath(pom.backshopping())).click();
+	Thread.sleep(100);
+	driver.findElement(By.xpath(pom.Cart_anti1())).click();
 	System.out.println("Multiple Items successfully added to User cart");
 	Thread.sleep(100);
 	driver.findElement(By.xpath(pom.Checkout_Antibiotics())).click();
 	System.out.println("Validated Checkout of Multiple items of User Profile");
-	
+	Thread.sleep(100);
+	driver.findElement(By.xpath(pom.selectAddress())).click();
+	driver.findElement(By.xpath(pom.Cardnumber())).sendKeys("123456789");
+	driver.findElement(By.xpath(pom.ExpiryMonth())).sendKeys("09");
+	driver.findElement(By.xpath(pom.ExpiryYear())).sendKeys("27");
+	driver.findElement(By.xpath(pom.CVVNO())).sendKeys("234");
+	driver.findElement(By.xpath(pom.Payment())).click();
+	String validate=driver.findElement(By.xpath(pom.validatepayment())).getText();
+	System.out.println("Multiple items successfully orderd has message: 	"+validate);
 }
 @AfterTest
 public void aftertest() {
